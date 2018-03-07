@@ -6,9 +6,17 @@ class Note {
   
   createElement(title){
     let newNote = document.createElement('div');
+    let p = document.createElement('p');
+    let rem = document.createElement('a');
+      
+    p.innerHTML = this.title;
+    rem.innerHTML = 'Remove';
+    rem.setAttribute('class', 'card-remove');
+    rem.setAttribute('href', '#');
+    rem.addEventListener('click', this.remove.bind(newNote));
     
-    // HINT🤩 a.addEventListener('click', this.remove.bind(newNote));
-    
+    newNote.appendChild(p);
+    newNote.appendChild(rem);
     return newNote;
   }
   
