@@ -1,7 +1,7 @@
 class Note {
   constructor(title) {
     this.title = title;
-    // HINT🤩 this.element = this.createElement(title);
+    this.element = this.createElement(title);
   }
   
   createElement(title){
@@ -15,6 +15,8 @@ class Note {
   add(){
     // HINT🤩
     // this function should append the note to the screen somehow
+    let note = document.querySelector('.notes');
+    note.appendChild(this.element);
   }
   
   saveToStorage(){
