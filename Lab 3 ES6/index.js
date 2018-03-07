@@ -50,7 +50,7 @@ class App {
     this.btnAdd.addEventListener("click", this.createNote.bind(this));
     this.txtAdd = document.querySelector('#txtAddNote');
     this.txtAdd.addEventListener('keydown', this.createNote.bind(this));
-    this.loadNotesFromStorage();
+    // this.loadNotesFromStorage();
   }
   
   loadNotesFromStorage() {
