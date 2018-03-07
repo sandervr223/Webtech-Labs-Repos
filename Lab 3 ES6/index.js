@@ -61,15 +61,18 @@ class App {
    
   createNote(e){
     // this function should create a new note by using the Note() class
-    
-    // HINT🤩
-    // note.add();
-    // note.saveToStorage();
-    // this.reset();
+    e.preventDefault();
+    if((e.type == "click" || (e.type == "keydown" && e.keyCode == 13)) && this.txtAdd.value != ''){
+        // HINT🤩
+        note.add();
+        note.saveToStorage();
+        this.reset();
+    }
   }
   
   reset(){
     // this function should reset the form 
+    this.txtAdd.value = '';
   }
   
 }
